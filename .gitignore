@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# G82
+/results/
+assets/tb3/_*.xml
+*.mp4
