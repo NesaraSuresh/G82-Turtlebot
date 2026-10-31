@@ -87,7 +87,10 @@ class ArucoLandmarkDetector:
         img = image_bgr.copy()
         for m in meas:
             pts = m.corners.astype(int)
-            cv2.polylines(img, [pts], True, (0, 255, 0), 2)
+            # dock target (marker 0) in green, wall landmarks in orange (OpenCV colours are B, G, R)
+            is_target = m.id == 0
+            col = (0, 255, 0) if is_target else (0, 165, 255)
+            cv2.polylines(img, [pts], True, col, 3 if is_target else 2)
             cv2.putText(img, f"id{m.id} r={m.z[0]:.2f}m", tuple(pts[0] + np.array([0, -6])),
-                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 1, cv2.LINE_AA)
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.5, col, 1, cv2.LINE_AA)
         return img
