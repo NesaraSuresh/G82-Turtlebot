@@ -223,3 +223,6 @@ __marimo__/
 /results/
 assets/tb3/_*.xml
 *.mp4
+
+# Keep the curated evidence videos
+!evidence/videos/*.mp4

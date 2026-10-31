@@ -1,0 +1,17 @@
+scenario   seed  success  dock_cm  yaw_deg  rmse_cm   nees  recov
+nominal    1     True         0.7     0.44      5.2    1.0  0
+nominal    2     True         1.7     1.77      6.3    1.2  0
+nominal    3     True         3.4     3.86      6.8    4.0  0
+nominal    4     True         1.4     1.40      4.9    3.6  0
+nominal    5     True         0.7     0.24     11.3    1.1  0
+occlusion  1     True         0.8     0.64      5.4    1.5  0
+push       1     True         0.8     0.62      8.9    2.8  0
+push       2     True         1.8     2.04      8.4    1.9  0
+push       3     True         3.7     4.16      7.0   29.2  1
+push       4     True         1.6     1.70      6.6   11.4  1
+push       5     True         0.8     0.65     12.0    2.4  0
+
+Means per scenario
+nominal    n=5  success=5/5  dock_cm=1.6  rmse_cm=6.9  nees=2.2
+occlusion  n=1  success=1/1  dock_cm=0.8  rmse_cm=5.4  nees=1.5
+push       n=5  success=5/5  dock_cm=1.7  rmse_cm=8.6  nees=9.5
