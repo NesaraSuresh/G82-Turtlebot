@@ -494,7 +494,12 @@ python summarise.py                                      # table over results/*_
 
 **Presentation demo video:** [https://youtu.be/OJ8svSIu7EU](https://youtu.be/OJ8svSIu7EU) is a single comparison video that brings the runs together. It is meant as the walkthrough; the separate clips below are the raw evidence behind it.
 
-**Individual demo videos** (seed 4, nominal and push): VIDEOS-GO-HERE
+**Individual demo videos** (seed 4, nominal and push): 
+
+https://github.com/user-attachments/assets/87580d75-7820-4706-9feb-0341bdab8c1e
+
+
+https://github.com/user-attachments/assets/b1aba927-12d6-471a-8617-90eb6f9df571
 
 In the robot-camera panel the dock target is boxed in green and the wall landmarks in orange. In the map panel the truth is green and the EKF estimate is orange with its 2σ ellipse, with a live readout of time, mode, position error, 2σ and yaw error. The videos run at twice real time. More clips are in `evidence/videos/` (nominal seeds 1 and 3, push seed 3, occlusion seed 1, odometry-only seed 3).
 
