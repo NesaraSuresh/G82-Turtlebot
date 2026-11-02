@@ -496,10 +496,9 @@ python summarise.py                                      # table over results/*_
 
 **Individual demo videos** (seed 4, nominal and push): 
 
-https://github.com/user-attachments/assets/87580d75-7820-4706-9feb-0341bdab8c1e
+https://github.com/user-attachments/assets/718115fb-1c5c-4ac2-a8f0-7dff18ef4431
 
-
-https://github.com/user-attachments/assets/b1aba927-12d6-471a-8617-90eb6f9df571
+https://github.com/user-attachments/assets/098123cb-5740-45c0-9ed8-8488d9c28547
 
 In the robot-camera panel the dock target is boxed in green and the wall landmarks in orange. In the map panel the truth is green and the EKF estimate is orange with its 2σ ellipse, with a live readout of time, mode, position error, 2σ and yaw error. The videos run at twice real time. More clips are in `evidence/videos/` (nominal seeds 1 and 3, push seed 3, occlusion seed 1, odometry-only seed 3).
 
