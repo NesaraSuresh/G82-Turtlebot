@@ -188,7 +188,7 @@ to 2.77 mm (max 4.41 mm, 60 views) on average, which confirms the frame chain.
 |camera|render → 3×3 Gaussian blur → N(0, 4) grey-level noise; optional blackout (occlusion)|
 |LiDAR|`mj_multiRay` from the scan plane, N(0, 1 cm) range noise, 2 % dropouts, 0.12 to 3.5 m|
 
-**Noise identification** (`scripts/characterise_noise.py`). This is an offline experiment that uses ground truth, as use motion capture would be used on the real robot.
+**Noise identification** (`scripts/characterise_noise.py`). This is an offline experiment that uses ground truth, as motion capture would be used on the real robot.
 
 * **Camera R.** The robot is placed at about 800 poses relative to the 12 cm dock marker and a 20 cm wall marker:
 
@@ -230,7 +230,7 @@ EKF in `src/estimation/ekf.py`. A UKF with the same models is in `src/estimation
 |-|-|-|
 |state|`[x, y, θ]` in W|-|
 |predict|odometry `(v, ω)` at 20 Hz, mid-point model|-|
-|Q|input-noise model `M = diag((a1|v|
+|Q|input-noise model `M = diag((a1\|v\|+a2\|ω\|+c_v)², (a3\|v\|+a4\|ω\|+c_ω)²)`, `Q = G M Gᵀ`|identified: a1=0.0323, a2=0.00188, a3=0, a4=0.2, v_floor=0.001, w_floor=0.002|
 |measurement|`z = [r, b, α]` per visible marker (α only if ρ < 15.3)|known marker map|
 |R|`diag(σ_r(ρ)², σ_b(ρ)², σ_α(ρ)²) · r_scale`|identified models, r_scale = 10 (see below)|
 |gating|NIS χ² test, p = 0.997 (2 or 3 dof)|-|
