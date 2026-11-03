@@ -603,6 +603,7 @@ fails if any module in `estimation/`, `planning/`, `control/` or `perception/` r
 We acknowledge the use of Artificial Intelligence (AI) tools, during the development of our robotics project.
 
 AI was used as a supportive tool to assist us in structuring the project, organizing and distributing tasks among team members, and providing guidance when we encountered difficulties. It was also used to help us understand and execute relevant commands, troubleshoot errors, and identify possible solutions during the development process.
+Piper Text-to-Speech, an offline AI-based voice synthesis tool, was also used to generate the narration for the project demonstration video based on a script prepared by the team.
 
 AI was used to support our learning, problem-solving, and project management. However, the final decisions, implementation, testing, and verification of the project were carried out by our team. We take full responsibility for the accuracy, originality, and integrity of the work submitted.
 
