@@ -598,7 +598,17 @@ fails if any module in `estimation/`, `planning/`, `control/` or `perception/` r
 
 ---
 
-## 11. Acknowledgements
+## 11. Declaration of AI Usage
+
+We acknowledge the use of Artificial Intelligence (AI) tools, during the development of our robotics project.
+
+AI was used as a supportive tool to assist us in structuring the project, organizing and distributing tasks among team members, and providing guidance when we encountered difficulties. It was also used to help us understand and execute relevant commands, troubleshoot errors, and identify possible solutions during the development process.
+
+AI was used to support our learning, problem-solving, and project management. However, the final decisions, implementation, testing, and verification of the project were carried out by our team. We take full responsibility for the accuracy, originality, and integrity of the work submitted.
+
+---
+
+## 12. Acknowledgements
 
 * TurtleBot3 Waffle Pi model and meshes: [ROBOTIS robotis_mujoco_menagerie](https://github.com/ROBOTIS-GIT/robotis_mujoco_menagerie), Apache-2.0 (`assets/tb3/LICENSE`).
 * 41014 weekly tutorial material (EKF, LQR); MuJoCo; OpenCV ArUco.
