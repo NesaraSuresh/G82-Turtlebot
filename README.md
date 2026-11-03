@@ -560,7 +560,45 @@ fails if any module in `estimation/`, `planning/`, `control/` or `perception/` r
 
 ---
 
-## 10. Acknowledgements
+## 10. Team and contributions
+
+| Member | Student ID | Part | Marking criteria |
+| ------ | ---------- | ---- | ---------------- |
+| Ramganesh Samala | 25733597 | Part 1: Sensing and Estimation | B (Sensing) and C (Estimation), plus half of E |
+| Nesara Suresh | 26157204 | Part 2: Modelling, Planning and Control | A (Modelling) and D (Control), plus half of E |
+
+**Part 1: Sensing and Estimation (Ramganesh Samala)**
+
+| Area | What was done | Files |
+| ---- | ------------- | ----- |
+| Camera and ArUco | Camera calibration, ArUco detection and PnP, camera-to-base frame check | `src/perception/`, `scripts/calibrate_camera.py` |
+| Noise identification | Measured camera noise (R) and odometry noise (Q) | `scripts/characterise_noise.py` |
+| EKF | Motion and measurement models, gating, recovery after rejections, R tuning sweep | `src/estimation/ekf.py`, `src/estimation/odometry.py` |
+| UKF vs EKF | Estimator comparison (HD extension) | `src/estimation/ukf.py` |
+| Robustness (half of E) | `noisy`, `occlusion` and `odom_only` scenarios; estimator part of the failure analysis | `scripts/run_trials.py` |
+| HAL interface and config | Hardware abstraction layer and parameter configuration, the contract between the two parts | `src/hal/`, `src/config.py` |
+| Final Monte-Carlo run | 10 seeds on the final code | `docs/results/` |
+| Project page | Sections 4 and 5, frames diagram | `README.md` |
+| Results and contributions | Section 7 of this page and this table (shared with Part 2) | `README.md` |
+| Video | Editing of the full 5-minute demo video | [demo video](https://youtu.be/OJ8svSIu7EU) |
+
+**Part 2: Modelling, Planning and Control (Nesara Suresh)**
+
+| Area | What was done | Files |
+| ---- | ------------- | ----- |
+| Model | State-space model, controllability and observability analysis | `src/analysis/model_analysis.py` |
+| Simulator | Robot model fixes, world generation, scenario setup | `src/sim/`, `assets/` |
+| Navigation | LiDAR occupancy grid, A*, path smoothing | `src/planning/` |
+| Control | LQR tracker (weights, gain scheduling, poles), docking mission, LiDAR safety stop | `src/control/` |
+| Robustness (half of E) | `push`, `slip` and `stress` scenarios; control part of the failure analysis | `scripts/run_trials.py` |
+| Selected-run evidence | Per-run figures and metrics, the uncertainty-plot and results-summary scripts and table, the colour-coded camera overlay and live camera demo, section 7a | `plot_uncertainty.py`, `summarise.py`, `live_camera.py`, `evidence/` |
+| Project page | Sections 3 and 6, system overview, install and run instructions | `README.md` |
+| Results and contributions | Section 7 of this page and this table (shared with Part 1) | `README.md` |
+| Video | Seed-level run videos: nominal, push, occlusion and odometry-only clips | `evidence/videos/` |
+
+---
+
+## 11. Acknowledgements
 
 * TurtleBot3 Waffle Pi model and meshes: [ROBOTIS robotis_mujoco_menagerie](https://github.com/ROBOTIS-GIT/robotis_mujoco_menagerie), Apache-2.0 (`assets/tb3/LICENSE`).
 * 41014 weekly tutorial material (EKF, LQR); MuJoCo; OpenCV ArUco.
